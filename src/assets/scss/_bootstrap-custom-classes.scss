@@ -1,0 +1,14 @@
+@include widths();
+
+.underlined {
+    display: inline-block;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 110%;
+        height: 6px;
+        margin-top: 1rem;
+        background-color: theme-color("primary");
+    }
+}

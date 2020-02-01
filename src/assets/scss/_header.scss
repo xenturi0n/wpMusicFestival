@@ -9,8 +9,7 @@
 
     &::after {
         content: "";
-        // background-color: rgba(black, .7);
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, .8) 40%, rgba(0, 0, 0, 0) 100%);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -20,38 +19,75 @@
 
     }
 
-    .navbar-brand img {
-        display: inline-block;
-        width: 10rem;
+    h1 {
+        letter-spacing: .3rem;
+        font-size: 2rem;
+        font-weight: bold;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 2.5rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 3rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 3.9rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 4.7rem;
+        }
+
     }
 
-    .nav-item {
-        &:last-child {
-            padding-right: 0rem;
+    [class^="header-icon"] {
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            margin-right: .5rem;
+            background: theme-color("primary");
+        }
+    }
 
-            .nav-link {
-                padding-right: 0rem;
+    .header-icon {
+        &__1 {
+            &::before {
+                -webkit-mask-image: url(../images/time.svg);
+                mask-image: url(../images/time.svg);
+
             }
         }
 
-        &:not(:last-child) {
-            padding-right: 3rem;
+        &__2 {
+            &::before {
+                -webkit-mask-image: url(../images/headphones.svg);
+                mask-image: url(../images/time.svg);
+                width: 2.35rem; //El icono es n poco mas ancho
+            }
         }
 
-
-    }
-
-    a {
-        font-weight: bold;
-        color: white;
-
-        &:hover {
-            color: pink;
+        &__3 {
+            &::before {
+                -webkit-mask-image: url(../images/ticket.svg);
+                mask-image: url(../images/time.svg);
+            }
         }
     }
 }
 
-// .navbar-expand-lg .navbar-nav .nav-link:last-child {
-//     padding-right: 0rem;
-//     padding-left: 0.5rem;
-// }
+
+#headerNavbarContent {
+    @include media-breakpoint-down(md) {
+        background-color: rgba(0, 0, 0, .3);
+        margin-top: 2rem;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,9 @@
+@mixin widths() {
+
+    @each $element,
+    $size in $widths {
+        .wf-#{$element} {
+            width: #{$size}
+        }
+    }
+}

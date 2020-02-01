@@ -1,0 +1,23 @@
+mixin presentacion-item__header
+    .row.presentacion-item__header.py-3.mb-5
+        .col-2.text-white.font-weight-bold.text-center Hora
+        .col-2.text-white.font-weight-bold.text-center DJ
+        .col-2.text-white.font-weight-bold.text-center.d-none.d-lg-flex
+        .col-2.text-white.font-weight-bold.text-center Escenario
+        .col-2.text-white.font-weight-bold.text-center 
+        .col-2.text-white.font-weight-bold.text-center Ticket
+
+mixin presentacion-item(hora, dj, image)
+    .row.presentacion-item.mt-4.py-3.py-lg-0
+        .col-2.d-flex.align-items-center.justify-content-center
+            p.m-0.text-white= hora
+        .col-2.d-flex.align-items-center.justify-content-center
+            p.m-0.text-white= dj
+        .col-2.d-none.d-lg-flex.align-items-center.justify-content-center
+            img(src=image, alt=dj).presentacion-item__img
+        .col-2.d-flex.align-items-center.justify-content-center        
+            span.text-white Principal
+        .col-2.d-flex.align-items-center.justify-content-center
+            a.text-primary(href="#") Detalles
+        .col-4.col-lg-2.d-flex.align-items-center.justify-content-center
+            button.btn.btn-primary.font-weight-bold Comprar Tickets

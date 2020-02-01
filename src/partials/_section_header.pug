@@ -1,21 +1,45 @@
 header#header
-    .container.pt-96
+    .container.pt-8
         .row
             nav.navbar.navbar-expand-lg.navbar-dark.w-100
                 a.navbar-brand(href="#")
-                    img(src="assets/images/logoWPFestival.svg")
+                    img.wf-10(src="assets/images/logoWPFestival.svg")
 
-                .collapse.navbar-collapse#navbarContent
+                button.navbar-toggler(type="button", "data-toggle"="collapse", "data-target"="#headerNavbarContent", "aria-controls"="headerNavbarContent", "aria-expanded"="false", "aria-label"="Toggle navigation")
+                    span.navbar-toggler-icon
+
+                .collapse.navbar-collapse.px-8.py-4.p-lg-0#headerNavbarContent
                     ul.navbar-nav.ml-auto
-                        li.nav-item.active
-                            a.nav-link(href="#") WP FESTIVAL
-                        li.nav-item
-                            a.nav-link(href="#") DJ'S
-                        li.nav-item
-                            a.nav-link(href="#") PRESENTACIONES
-                        li.nav-item
-                            a.nav-link(href="#") BLOG
-                        li.nav-item
-                            a.nav-link(href="#") CONTACTO
-        .row
-            .col-12.bg-dark Hola mundo
+                        li.nav-item.mr-5.my-2.my-lg-0.active
+                            a.nav-link.font-weight-bold(href="#") WP FESTIVAL
+                        li.nav-item.mr-5.my-2.my-lg-0
+                            a.nav-link.font-weight-bold(href="#") DJ'S
+                        li.nav-item.mr-5.my-2.my-lg-0
+                            a.nav-link.font-weight-bold(href="#") PRESENTACIONES
+                        li.nav-item.mr-5.my-2.my-lg-0
+                            a.nav-link.font-weight-bold(href="#") BLOG
+                        li.nav-item.mr-0.my-2.my-lg-0
+                            a.nav-link.font-weight-bold.pr-0(href="#") CONTACTO
+
+        .row.mb-4.mt-4.mt-lg-10.d-none.d-lg-block
+            .col-9.d-flex.justify-content-between
+                i.header-icon__1.text-white.text-white.d-flex.align-items-center 21 Nov 2020
+                i.header-icon__2.text-white.d-flex.align-items-center 24 DJ'S
+                i.header-icon__3.text-white.d-flex.align-items-center +10,0000 Entradas
+
+        .row.mt-8.mt-lg-0
+            .col-12.col-md-9
+                h1.text-white.mb-4.text-center.text-md-left
+                    span.text-secondary WP 
+                    | FESTIVAL MUSIC
+                    br
+                    span.text-secondary MÉXICO
+                    |  2020
+                P.text-white.d-none.d-md-block
+                 | México 
+                 span.font-weight-bold WP Festival Music
+                 |  es un Evento de música electrónica con Djs que estan dentro del 
+                 span.font-weight-bold Top 20
+                 |  en el mundo. Luces, buena musica y los mejores DJ’s del mundo.
+            .col-12.col-md-3.d-flex.justify-content-center.justify-content-md-end.align-items-center.mt-5.mt-md-0
+                button.btn.btn-primary.font-weight-bold Comprar Tickets

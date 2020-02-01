@@ -1,0 +1,20 @@
+include _presentacion_item.pug
+
+section#sectionPresentaciones.text-white
+    .container.pt-8
+        .row
+            .col-12
+                h1.display-4.font-weight-bold.underlined PRESENTACIONES
+                p.text-secondary.mt-2 Aquí encontrarás los detalles de las presentaciones horarios, djs, escenario y la posibilidad de comprar tickets
+        
+        +presentacion-item__header
+        
+        +presentacion-item("21:00", "DJ Monza", "assets/images/dj-2.jpg")
+        +presentacion-item("22:00", "DJ Turantula", "assets/images/dj-3.jpg")
+        +presentacion-item("23:00", "DJ Momia", "assets/images/dj-4.jpg")
+        +presentacion-item("00:00", "DJ Pacheco", "assets/images/dj-5.jpg")
+        +presentacion-item("01:00", "DJ Mamacita", "assets/images/dj-6.jpg")
+
+        .row.py-7
+            .col-12.text-center
+                button.btn.btn-primary.font-weight-bold.p-3 Ver todas las presentaciones

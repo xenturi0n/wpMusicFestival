@@ -1,0 +1,20 @@
+.presentacion-item {
+    background-color: rgba($color: #000000, $alpha: .3);
+    border: 1px solid rgba($color: white, $alpha: .2);
+
+    &__img {
+        width: 9rem;
+        height: 11rem;
+        object-fit: cover;
+    }
+
+    &__header {
+        background-color: rgba($color: #000000, $alpha: .4);
+        border: 1px solid rgba($color: white, $alpha: .2);
+    }
+
+    button {
+        border-radius: 50px;
+        padding: .5rem 1.5rem;
+    }
+}
